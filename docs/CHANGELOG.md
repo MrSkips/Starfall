@@ -20,3 +20,4 @@
 
 ## 2026-10-05
 - Blender map (SF_Map.fbx) + all gameplay models (SF_Models.fbx): props, purchase pads, sign, mutation meteors, Starheart. Studio tools ApplyMap / ApplyModels written; awaiting import.
+- Map + models imported and applied in Studio; meteor meshes, pads, signs, upgrades verified in playtest; lighting toned down (was washed out).

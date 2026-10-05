@@ -40,11 +40,11 @@ local function setupLighting()
 	pcall(function() Lighting.Technology = Enum.Technology.Future end)
 	Lighting.ClockTime = 10.6
 	Lighting.GeographicLatitude = 28
-	Lighting.Brightness = 2.6
-	Lighting.Ambient = Color3.fromRGB(105, 115, 140)
-	Lighting.OutdoorAmbient = Color3.fromRGB(150, 165, 195)
-	Lighting.EnvironmentDiffuseScale = 0.6
-	Lighting.EnvironmentSpecularScale = 0.35
+	Lighting.Brightness = 1.8
+	Lighting.Ambient = Color3.fromRGB(80, 88, 105)
+	Lighting.OutdoorAmbient = Color3.fromRGB(128, 136, 155)
+	Lighting.EnvironmentDiffuseScale = 0.4
+	Lighting.EnvironmentSpecularScale = 0.2
 	Lighting.ShadowSoftness = 0.3
 	local atm = Lighting:FindFirstChildOfClass("Atmosphere") or Instance.new("Atmosphere", Lighting)
 	atm.Density = 0.28
@@ -60,8 +60,8 @@ local function setupLighting()
 	local cc = Lighting:FindFirstChild("ToyGrade") or Instance.new("ColorCorrectionEffect")
 	cc.Name = "ToyGrade"
 	cc.Saturation = 0.12
-	cc.Contrast = 0.06
-	cc.Brightness = 0.02
+	cc.Contrast = 0.12
+	cc.Brightness = -0.02
 	cc.Parent = Lighting
 	local sky = Lighting:FindFirstChildOfClass("Sky")
 	if sky then sky.CelestialBodiesShown = true end
