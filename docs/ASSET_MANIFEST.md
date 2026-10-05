@@ -20,3 +20,19 @@ Status values: planned · concept only · generated · imported · verified · r
 | art/models/SF_Map.fbx | Crater floor + meteorite, cliffs, 8 ramps, plot pads, fences, path ring, lamps, trees, outer mesas (visual only) | tools/blender/build_map.py | ServerStorage.Tools.ApplyMap |
 | art/models/SF_Machines.fbx | Superseded by SF_Models.fbx (machines only) | tools/blender/build_machines.py | (ApplyMachineModels now forwards to ApplyModels) |
 Runtime hooks: MeteorService welds Art.Meteors[mutation] onto the hitbox ball; PurchaseService toggles pad Visual; MachineAnimator animates Conveyor rollers, Bellows pump, Boots bob/spin.
+
+## Audio (2026-10-05): integrated + verified loading in Studio playtest (StarterPlayerScripts.FX)
+Free Creator Store audio; licensed-library uploads (ProSoundEffects, APMOfficial, DistrokidOfficial) preferred. Not yet heard by Zack — swap any that sound wrong.
+| Key | Asset ID | Source / creator | Used for |
+|---|---|---|---|
+| Impact | 92921472425972 | "Rock Slam Crater SFX" / GleonoffG | meteor landing |
+| Whoosh | 9114428742 | "Fireball Burning Whoosh By 1" / ProSoundEffects | meteor falling |
+| Pickup | 120136323399242 | "Rock Hit" / Canned_Beans9669 | pickup |
+| Deposit | 115881287161374 | "Rock Impact" / GleonoffG | meteor into crusher |
+| Coins | 73185454281235 | "Collect coins" / Nu World | payout |
+| Build | 9048749902 | "Daily Affirmation - Mnemonic1" / APMOfficial | upgrade built |
+| Alarm | 9125709757 | "Neutral Zone Alarm…" / ProSoundEffects | meteor shower start (first 3 s) |
+| Click | 74354585591493 | "Default Button Sound - 1" / Val_DaMage | UI buttons |
+| Hammer | 106200935745005 | "Hammer Hit 2" / Lixue_Cromwell | forge slam |
+| Music 1 | 100333487341753 | "Retro Radiance" / DistrokidOfficial (63 s) | background playlist |
+| Music 2 | 132921711367845 | "Ahead" / DistrokidOfficial (71 s) | background playlist |
