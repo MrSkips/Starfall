@@ -1,0 +1,82 @@
+{
+  "createdNodeIds": [
+    "6:351",
+    "I6:351;3:35",
+    "I6:351;3:36",
+    "I6:351;3:37",
+    "I6:351;3:38",
+    "I6:351;3:39"
+  ],
+  "mutatedNodeIds": [
+    "4:147",
+    "4:63",
+    "4:123",
+    "I4:63;3:101",
+    "I4:63;3:102",
+    "I4:63;3:103"
+  ],
+  "screenAudit": {
+    "id": "4:2",
+    "total": 209,
+    "counts": {
+      "TEXT": 72,
+      "FRAME": 66,
+      "RECTANGLE": 9,
+      "INSTANCE": 23,
+      "VECTOR": 36,
+      "ELLIPSE": 3
+    },
+    "fonts": [
+      "Fredoka",
+      "Nunito"
+    ],
+    "imageNodes": [
+      {
+        "id": "4:6",
+        "name": "Asteroid gameplay background / concept art only",
+        "type": "RECTANGLE",
+        "width": 1440,
+        "height": 810
+      },
+      {
+        "id": "4:79",
+        "name": "Asteroid gameplay background / concept art only",
+        "type": "RECTANGLE",
+        "width": 960,
+        "height": 540
+      },
+      {
+        "id": "4:112",
+        "name": "Asteroid gameplay background / concept art only",
+        "type": "RECTANGLE",
+        "width": 1440,
+        "height": 810
+      },
+      {
+        "id": "4:160",
+        "name": "Asteroid gameplay background / concept art only",
+        "type": "RECTANGLE",
+        "width": 1440,
+        "height": 810
+      }
+    ],
+    "unlinkedInstances": 0
+  },
+  "patternAudit": {
+    "id": "4:220",
+    "total": 261,
+    "counts": {
+      "TEXT": 107,
+      "FRAME": 84,
+      "INSTANCE": 30,
+      "VECTOR": 34,
+      "RECTANGLE": 6
+    },
+    "fonts": [
+      "Fredoka",
+      "Nunito"
+    ],
+    "imageNodes": [],
+    "unlinkedInstances": 0
+  }
+}

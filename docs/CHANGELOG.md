@@ -12,3 +12,8 @@
 - Figma: tokens, text and effect styles, 14 icons, 20+ components, 6 screens (HUD desktop and mobile, Shop desktop and mobile, Codex, Settings).
 - Roblox: new UI.Kit and UI.Panels modules; ClientMain HUD rebuilt from Figma; Shop, Codex, and Settings panels; RequestPurchase remote; Found_/Owned_ attributes for UI state.
 - Art (paused): 12 generated meshes in ServerStorage.Art; ServerStorage.Tools.BuildArt written but **not run**.
+
+## UI rev 2: Astra UI-02 "Asteroid" (2026-10-05)
+- Rebuilt UI.Kit (exact Figma tokens), UI.Panels (Collection, Your Forge, Settings), ClientMain (desktop 1440×810 and mobile 960×540 layouts, Forge Activity, notices, shower-active banner).
+- 21 icons exported from Astra's Figma and uploaded. MachineService sends job/idle notices and drives Crusher ProcessFX.
+- Place published privately (88630827996555).

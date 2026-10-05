@@ -1,41 +1,45 @@
-# UI: Figma → Roblox mapping (rev 1, 2026-10-05)
+# UI: Astra UI-02 "Asteroid" → Roblox (rev 2, 2026-10-05)
 
-Figma file: **Starfall Forge – UI**, https://www.figma.com/design/epTn2brL2LP9N8DjjV7YNk (owner: Claude is the only writer; Astra reviews screenshots).
-Pages: Foundations (variables and styles) · Components · Screens (HUD Desktop 1920×1080, HUD Mobile 844×390, Shop Desktop, Shop Mobile, Codex, Settings).
-Note: the Figma backdrops are a hand-drawn stand-in. Uploading the CON-01 image is blocked by the network proxy, so drag `art/concepts/CON-01/CON-01-concept-reference.png` onto the "Backdrop" layers by hand if wanted.
+**Source of truth:** Astra's Figma file **Starfall Forge / Asteroid UI**, https://www.figma.com/design/YsaaA8w76ZIMNpBC2cGDIs (pages "01 — Asteroid UI" and "03 — UI components"), plus `art/concepts/UI-02/` (18 video-pattern crops, final exports, REFERENCE-INDEX.md).
+Rev 1 (the cream "toy" UI in Claude's file epTn2brL2LP9N8DjjV7YNk) is **superseded** and kept for history only.
 
-## Tokens (Figma variables → `StarterPlayerScripts.UI.Kit`)
-| Figma | Roblox (Kit) |
-|---|---|
-| SF Color/surface/cream #FFF0CF, navy #26384D, accent/orange #F2A348, gold #FFC83D, state/success #46BFB2, disabled #B9B3A6, mutation/* | `Kit.C.*`, `Kit.Mutation.*` |
-| radius sm/md/lg 10/14/20 · stroke/ui 3 | `Kit.R.*` · `Kit.STROKE` (UIStroke, Border mode) |
-| Text: Display/L Fredoka One 32, Title 24, Label 18, Body Nunito ExtraBold 16, Caption Nunito Bold 13 | `Kit.T.*` (FredokaOne and Nunito FontFace; Label/Body/Caption are +2px in-game for phone readability) |
-| Effect "Toy shadow" (navy, y+4, no blur) | `Kit.shadowed()`: navy copy frame offset 4px (Disabled buttons have 0 offset) |
+## Tokens (read directly from Figma variables → `UI.Kit`)
+space #141d2d · panel #26354a · inset #1b283b · border #53657c · cream #fff0cf · muted #b8c5d4 · orange #f5a15d · teal #64dfd1 · purple #b89bff · red #f17779 · gold #ffd671 · gap 12 · pad 20 · radius 16 · border 2px
+Text: title Fredoka Bold 32 · label Fredoka Bold 22 · body Nunito Bold 16 · small Nunito Bold 13 (Roblox: FredokaOne + Nunito Bold).
+Effect "Panel depth": rgba(5,10,20,0.6), y+5, no blur (Kit.panel builds it as a "Depth" frame).
+Button tones: Primary orange/#141d2d text · Secondary panel/cream · Danger red · Disabled inset/muted.
 
-## Components
-| Figma component | Roblox builder | Behavior |
+## Screens → code (design units; UIScale = viewportHeight / 810 desktop or / 540 mobile)
+| Figma screen / component | Roblox | Notes |
 |---|---|---|
-| CurrencyPill | ClientMain `Currency` | Under the Roblox top bar (uses `GuiService.TopbarInset`). Bumps and pops "+$N" on payout |
-| EventCapsule (Countdown/Active) | ClientMain `Shower` | Reads `ReplicatedStorage` attributes ShowerAt and ShowerActive |
-| IconButton | `Kit.iconButton` | Settings (top-right), panel close (44px) |
-| SideButton | `Kit.sideButton` | Shop and Codex, left-middle (clear of the mobile thumbstick) |
-| CarryCard (by mutation) | ClientMain `CarryCard` | Visible while the player attribute `Carrying` is set |
-| DropButton (Desktop/Touch) | ClientMain `Drop` | Visible while carrying. Q / gamepad B. Touch layout sits above-left of Jump |
-| Toast | ClientMain `Toast` | Notify `{kind="toast"}`, 2.5 s |
-| WorldMarker | BillboardGui `DeliverMarker` | Over your Crusher intake while carrying |
-| Button (Primary/Secondary/Disabled) | `Kit.button`, `Kit.setButtonVariant` | Pressed state drops onto its shadow |
-| Toggle | `Kit.toggle` | Settings rows |
-| PanelHeader, ShopCard, CodexRow, SettingRow | `UI.Panels` | One modal at a time. Dim backdrop or X closes it |
+| 06 Stardust balance 193×100 @24,72 | ClientMain `Balance` | Moves below the Roblox top bar when needed; widens for big numbers |
+| 11 Shower countdown 253×100 (top-centre) | `Shower` | Switches to **08 Shower active** (orange, "New meteors are landing!") during showers |
+| Gear 56×52 | `IconButton_gear` → Settings | |
+| 05 Navigation rail 170×139 | `NavRail` (ForgeButton, CollectionButton) | Mobile: 58×54 icon buttons (forge_cream, book_cream) |
+| 17 Processing queue "FORGE ACTIVITY" 287×321 | `ForgeActivity` | One row per built stage (Crusher always). Animated from server `Notify{kind="job", startedAt, duration}`. The job's time is split across built stages. Desktop only (not in the mobile design) |
+| 09 Carry and drop 335×145 | `Carry` | Icon tinted per mutation. "Drop meteor" (Q / gamepad B also work). Mobile: 300×81 card plus a separate 170×54 Drop above Jump |
+| DELIVER HERE 180×63 | BillboardGui over your Crusher | |
+| 18 Completion notice 287×100 | `Notice` | Payouts ("Meteor processed! +N Stardust added") and server messages |
+| 03 Collection (01 Mutation cards, 02 Unknown mutation, 03 browser) | `Panels` Collection | Search box filters live. Discovery = player attribute `Found_<Mutation>` |
+| 04 Forge (14 categories, 07 upgrade detail, 06 balance, 13 stages) | `Panels` Forge | Machine levels map onto Config items (below). Upgrade → `RequestPurchase` (server-validated) |
+| Settings | `Panels` Settings | Not in UI-02. Built in the same language (guide beam, reduced effects) |
 
-## Screens → behavior
-- **Shop:** mirrors the purchase pads. States: Owned / Locked (shows the requirement) / Affordable (Primary) / Too expensive (Disabled). The buy button fires `Remotes.RequestPurchase(itemId)`. The server validates type, existence, rate (≤ 4/s), ownership, requirement, and funds through the same `tryBuy` path as the pads. Owned items replicate as plot attributes `Owned_<id>`.
-- **Codex:** odds are computed from Config weights and always shown. Discovery = player attribute `Found_<Mutation>`, set by the server on pickup.
-- **Settings (client-only):** guide beam, reduced effects (turns off meteor particles and fire), keyboard hints. Music and SFX rows come with audio.
-- **Responsive:** `UIScale = clamp(viewportY/820, 0.72, 1)`. Viewport height under 600 px = compact (Shop becomes a horizontal scrolling strip).
+### Forge panel ↔ economy mapping
+Crusher = Lv1 base, + Conveyor (Lv2), + Bellows (Lv3), stat = process time · Smelter / Forge / Star Anvil = build, stat = payout × · **Carry Boots added as a 5th category** (not in UI-02; it's the only upgrade that isn't a machine) · the stage strip highlights the furthest built machine.
 
-## Verified in Studio (2026-10-05, real mouse clicks through Studio MCP)
-HUD renders. The pill clears the top bar. Shop opens and shows live Owned/Locked states. A real `RequestPurchase` bought the Conveyor. A locked Star Anvil and a malformed request were both rejected. Codex shows 3 of 5 discovered with correct odds. Settings toggle flips and the panel stays open. No console errors.
-**Not verified:** real phone touch, gamepad, 2-player.
+## Deviations from 1:1 (deliberate)
+1. Forge panel has a 5th category (Carry Boots).
+2. Progress-bar track uses #141d2d instead of #1b283b so the bar is visible inside the #1b283b rows.
+3. Charged and Cosmic mutation icons, and the per-mutation meteor tints, were drawn by Claude in Astra's style (not in UI-02).
+4. Mobile joystick and jump are Roblox's native controls (the Figma circles were placeholders).
+5. Panels auto-shrink to fit very short screens.
 
-## Known gaps / next
-Icons are emoji placeholders; next step is replacing them with the Figma icon set uploaded as images. No open and close sounds yet. No Supernova/daily-crate screens (v03).
+## Icons
+Exported as SVG from Astra's file, rendered to 256 px PNG (`art/ui-icons/`, sources in `art/ui-icons/svg/`), bulk-uploaded by Zack, wired in `UI.Icons` (21 rbxassetid ids).
+
+## Verified (Studio, 2026-10-05, real mouse clicks)
+- **Desktop (1440×810 emulated device):** HUD, Forge panel (live Crusher Lv2, 2 → 1.3 sec, Upgrade • 250), Collection (3/5 discovered, Charged and Cosmic locked).
+- **Mobile layout (small viewport):** HUD and carry card.
+- No console errors. Purchases go through the validated remote.
+
+**Not verified:** a real phone, a gamepad, and the Forge Activity animation mid-job (verified idle state only).

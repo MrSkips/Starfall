@@ -17,3 +17,6 @@
 | D-014 | 2026-10-05 | Shower interval is 120 s for v01 testing (design target 360 s) | Temporary | Faster playtests |
 | D-015 | 2026-10-05 | Zack: the greybox looks too blocky. Pulled an art pass forward: 12 AI meshes generated into ServerStorage.Art and a BuildArt tool written (terrain crater, mesas, lighting, plot dressing). **Paused before running at Zack's request ("focus on UI")** | Paused | Zack |
 | D-016 | 2026-10-05 | UI built in Figma (tokens, 20+ components, 6 screens), then as native Roblox UI (Kit, Panels, ClientMain). Shop purchases go through a validated RequestPurchase remote | Done | docs/UI.md |
+| D-017 | 2026-10-05 | UI direction = Astra UI-02 "Asteroid" (charcoal panels, copper actions, teal progress), copied 1:1 into Roblox. Supersedes the rev-1 cream UI (D-016) | Approved by Zack ("copy 1:1") | docs/UI.md |
+| D-018 | 2026-10-05 | Figma ownership: Astra owns the UI-02 design file; Claude owns the Roblox implementation and reads Astra's file (read-only) | Adopted | Single writer per target |
+| D-019 | 2026-10-05 | Place published privately to Roblox (placeId 88630827996555) so the Asset Manager and DataStores work | Done (Zack) | |
