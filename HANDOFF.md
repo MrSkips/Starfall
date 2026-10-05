@@ -1,0 +1,91 @@
+# HANDOFF.md — the shared task board (Claude ⇄ ChatGPT/Codex ⇄ Astra ⇄ Zack)
+
+**Every agent: read this file first, and update your own section before you stop.**
+Last updated: 2026-10-05 by Claude.
+
+## 1. Rules of the road
+1. **One writer per target.** Only the owner listed in §3 edits a file or system. To change someone else's file, add a request to §5 instead.
+2. **Status words** (use them exactly):
+   - **planned:** written down, not made
+   - **produced:** the file or design exists
+   - **integrated:** it's in the Roblox place
+   - **verified:** tested in Studio, with the evidence named
+   Never claim more than you can show.
+3. **Handoffs** live in `handoffs/T-<ver>-<nn>_<topic>.md`, and the reply goes in `..._RETURN.md`. The receiver checks the real files before marking anything done.
+4. **Decisions** go in `docs/DECISIONS.md`. Anything marked **Needs Zack** is not decided, so don't build on it.
+5. **Studio is the live code.** Only Claude has Studio access (Studio MCP). Other agents propose code changes as files under `handoffs/`, and Claude integrates them.
+6. Commit with a message that says which agent did the work.
+
+## 2. Where the game is right now
+| Area | Status | Notes |
+|---|---|---|
+| Core loop: meteors, carry, deposit, machines, 6 upgrades, showers, Starheart | verified (solo) | 2-player Starheart and real phones are **not** verified |
+| Map (Blender `SF_Map.fbx`) | verified | Visual meshes only; collision is the old invisible greybox parts |
+| Models (`SF_Models.fbx`): 4 machines, Conveyor, Bellows, Boots, pads, sign, 5 meteors, Starheart | verified | Templates in `ServerStorage.Art`; tools `ApplyMap`, `ApplyModels` |
+| UI in game (HUD, Forge panel, Collection, Settings) | verified | Built to Astra UI-02 **copper/teal** palette (D-017) |
+| Sound + VFX (`StarterPlayerScripts.FX`) | verified (PC) | Music, 9 SFX, landing/payout/build effects. Zack hasn't heard the sounds yet |
+| Saving progress (DataStore) | **planned** | Biggest gap: players lose everything on leave |
+| Tutorial, Codex persistence, offline earnings, Supernova | planned | Step 3 |
+| Monetization plan | **planned** | Brief T-03-01 sent; no RETURN yet |
+| Pets + eggs | planned | D-020 needs Zack (Robux eggs yes/no) |
+| `src/` script export | **missing** | Needs Zack to save `place/StarfallForge.rbxlx` |
+
+## 3. Owners
+| Who | Owns | Does not touch |
+|---|---|---|
+| **Claude** | Roblox Studio place (all scripts, models, UI implementation), Blender scripts `tools/blender/*`, `docs/*` except where noted, integration and testing, `PROJECT_STATE.md`, this file's §2 | Astra's Figma file (read-only) |
+| **ChatGPT / Codex** | Design briefs and brainstorms (`handoffs/*_RETURN.md`), reviews, monetization design, Figma edits **only when Zack asks** | Studio and live scripts (propose changes instead) |
+| **Astra** | Art direction, concept images, Figma UI file `YsaaA8w76ZIMNpBC2cGDIs` | Code |
+| **Zack** | Approvals, saving and publishing the place, uploads, playtests, relaying handoffs | — |
+
+## 4. Task queues
+### Claude (now → next)
+1. **Waiting:** T-03-01 RETURN (the monetization brainstorm). When it arrives, follow `handoffs/T-03-01_CLAUDE_INTEGRATION.md`:
+   - write `docs/MONETIZATION.md` with an accept / revise / reject table
+   - build only the launch set, with server-side receipt handling
+2. **Step 3, which can start now:**
+   - saving progress (DataStore: Stardust, upgrades, discovered mutations, settings)
+   - first-minute tutorial
+   - offline earnings
+   - Supernova
+   Saving progress comes first because monetization depends on it.
+3. Measure free-player pacing for real: time to buy everything and Stardust per minute. This replaces the 15–25 min guess.
+4. When Zack approves: apply the new UI palette in the game (see request R-1).
+
+### ChatGPT / Codex
+1. **Produce the T-03-01 RETURN.** Use the brief in `handoffs/T-03-01_chatgpt_monetization.md`, including section L (pets + eggs), and save it as `handoffs/T-03-01_RETURN.md`. The brainstorm itself has not been done yet. Only the integration brief exists.
+2. If you change the UI palette again, fix button text contrast (request R-2) and log the change in `docs/DECISIONS.md` as **Needs Zack**.
+
+### Astra
+- Nothing assigned. Possible next: game thumbnail and icon once the name is picked (D-013), and pet concept art after T-03-01 returns.
+
+### Zack
+1. Save the place to `place/StarfallForge.rbxlx` (File → Save to File As), then publish.
+2. Send the T-03-01 brief to ChatGPT and save its RETURN.
+3. Decide the open items in §6.
+4. Run the friend playtest (`versions/v01/PLAYTEST.md`) on PC and phones.
+
+## 5. Open requests between agents
+| ID | From → To | Request | Status |
+|---|---|---|---|
+| R-1 | Codex → Claude | The UI was recolored to lime/cyan/red on dark grey (`art/concepts/UI-02/REFERENCE-COLORS.md`). Apply it in the game | **Blocked:** needs Zack approval. It replaces D-017 |
+| R-2 | Claude → ChatGPT/Codex | In the lime/cyan palette, white button text on lime #6FFF10 (≈1.3:1 contrast) and cyan #19F0F5 (≈1.4:1) is unreadable on phones without the outline. Use near-black text #080809 on lime/cyan (≈15:1), and keep white text for red and grey | Open |
+| R-3 | Claude → ChatGPT/Codex | Don't copy a specific hit game's palette 1:1. "Steal an Egg" colors make us look like a clone (ROADMAP top risk). Shift the hues so they're clearly our own (e.g. star-gold + teal + ember instead of lime + cyan + red) | Open |
+
+## 6. Decisions waiting on Zack
+- **D-020:** Robux eggs, yes or no. Stardust eggs are fine either way.
+- **UI palette:** keep the in-game copper/teal (D-017), or switch to Codex's lime/cyan/red (R-1)?
+- **D-013:** the final game name, needed before the thumbnail, store page and launch.
+- Whether the "Claude outputs/" folder should stay. It duplicates files in `art/models/`. Claude suggests ignoring it in git.
+
+## 7. Key facts every agent should know
+- **Place and Studio:** placeId 88630827996555, published privately. Studio test hook: `ServerStorage.DebugCall:Invoke(service, fn, ...)`.
+- **Economy (Config):**
+  - meteor base value 15 Stardust; mutations Normal ×1 / Molten ×2 / Frozen ×3 / Charged ×5 / Cosmic ×12
+  - upgrades: Conveyor 40, Boots 80, Smelter 120, Bellows 250, Forge 450, Star Anvil 1,200 (total 2,140)
+  - a meteor every 12 s; shower every 120 s (testing value, design is 360)
+- **Hard rules for any money feature:**
+  - no paid power against other players
+  - paid random items only with the odds shown and a region gate
+  - no dark patterns aimed at kids
+  - the free path must reach Supernova
