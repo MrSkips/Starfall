@@ -1,49 +1,31 @@
-# PROJECT_STATE — Starfall Forge (working title)
+# PROJECT_STATE: Starfall Forge (working title)
 
-Last updated: 2026-10-05 by Claude (integration owner, v00)
-Master prompt revision: MP-r1 (Zack's "Claude Master Prompt — Research and Build an AI-Made Roblox Game with ChatGPT")
+Last updated: 2026-10-05 by Claude (integration owner, v01)
+Master prompt revision: MP-r1 · Active version prompt: versions/v01/MASTER_PROMPT.md (v01-r1)
 
 ## Current version
-v00 — Research and direction. Status: **deliverables complete, waiting on Zack's concept approval + art references.**
+**v01: Core-loop greybox.** Status: **built and server-verified. Waiting on Zack's multiplayer playtest and saving the place.**
 
 ## Baseline
-- Repo: this folder (`Alpha Roblox Game`). Git initialized 2026-10-05. Baseline = first commit "v00 docs".
-- Studio: one open place, "Place1", **unsaved and unpublished** (PlaceId 0). It's an empty baseplate. No game content yet.
+- Repo: `Alpha Roblox Game` (git). The v01 commit follows "v00 docs".
+- Studio: "Place1" holds the full v01 build. **It is NOT saved to disk yet.** Zack: File > Save to File As > `place/StarfallForge.rbxlx` (use the **.rbxlx** format), then run `python3 tools/export_scripts.py` (or ask Claude) to copy the scripts into src/.
 
-## Approved decisions (from Zack, 2026-10-05)
-- Genre: tycoon, with a distinctive twist (research picks the twist).
-- Devices: PC and mobile equally.
-- Budget: $0 now. Ads are possible later if the game earns revenue.
-- Partner AI: ChatGPT. Zack will provide art-style references.
+## Approved decisions
+Tycoon with a twist · PC and mobile equal · $0 budget · Starfall Forge concept (D-005) · Art direction CON-01 Sunlit Toy Foundry (D-010) · Astra on art, ChatGPT available · Claude builds the Figma UI later (D-011).
 
-## Provisional (needs Zack's approval)
-- Concept: **Starfall Forge**: shared meteor rush plus forge tycoon. Fallback: Classic Forge Tycoon (same theme, single-player dropper). See docs/GAME_DESIGN.md §1.
-- Art direction: wait for references (docs/ART_BIBLE.md is a placeholder).
+## Completed in v01 (evidence in versions/v01/TASKS.md)
+Greybox map (seeded generator) · plots and spawn · meteor schedule, warning, fall, and mutations · carry, drop, and deposit · processing queue · 6 purchase pads with requirement order · showers plus Starheart co-op carry · HUD (Stardust, shower timer, carry card, guide beam, payout pop, toasts) · [Metrics] logging · DropOnPlot A/B toggle.
 
-## Completed (v00)
-- Capability audit (README.md §Capabilities)
-- Research brief (docs/RESEARCH.md)
-- Concept matrix, recommendation, and design doc (docs/GAME_DESIGN.md)
-- Architecture, interface contracts, and asset pipeline (docs/TECHNICAL_ARCHITECTURE.md)
-- Test and metrics plan (docs/TEST_PLAN.md)
-- Roadmap (docs/ROADMAP.md)
-- v01 master prompt (versions/v01/MASTER_PROMPT.md)
-- First ChatGPT handoff (handoffs/T-00-01_chatgpt_art_exploration.md)
+## Not verified yet
+2-player behavior (Starheart co-op payout, contested pickup with two real players) · real touch/mobile input · Studio's 3D viewport didn't render during Claude's session (screenshots were black), so there's no visual check of the greybox yet.
 
-## Active owners
-- v00 and v01 integration owner: Claude
-- Art exploration T-00-01: ChatGPT (waiting on Zack to relay it with the reference images)
-
-## Blockers / decisions needed from Zack
-1. Approve Starfall Forge, choose the fallback, or reject both.
-2. Attach the art references to the ChatGPT handoff T-00-01.
-3. Save the Studio place: File > Save to File As > `Alpha Roblox Game/place/StarfallForge.rbxl`. Before v03 you also need to publish it privately so DataStores work.
-
-## Latest verified build
-None.
+## Blockers / needs Zack
+1. Save the place as `place/StarfallForge.rbxlx` (otherwise the v01 work exists only in the open Studio window).
+2. Run the playtest in versions/v01/PLAYTEST.md and send the answers.
+3. If Studio's 3D view is black for you too, tell Claude (a graphics setting issue).
 
 ## Next action
-Zack approves the concept. Claude then runs versions/v01/MASTER_PROMPT.md: greybox core loop, built directly in Studio through MCP.
+Zack: save, then playtest. Claude: read the results, tune Config, then write the v02 master prompt (visual vertical slice: CON-01 meshes, real HUD from Figma, sound, perf numbers).
 
-## Resume packet (paste into a new session)
-> Project Starfall Forge. Read PROJECT_STATE.md, docs/DECISIONS.md, and the active versions/vNN/MASTER_PROMPT.md in the "Alpha Roblox Game" folder before acting. Claude is the integration owner. ChatGPT handles art and review through manual relay (Mode B). Studio MCP is available to Claude only.
+## Resume packet
+> Project Starfall Forge. Read PROJECT_STATE.md, docs/DECISIONS.md, docs/ART_BIBLE.md, and versions/v01/* in the "Alpha Roblox Game" folder. Claude is the integration owner and the only one with Studio MCP access. Studio is the live code surface. src/ is exported from place/StarfallForge.rbxlx with tools/export_scripts.py. Automated server tests use the Studio-only hook ServerStorage.DebugCall (Invoke(service, fn, ...)).

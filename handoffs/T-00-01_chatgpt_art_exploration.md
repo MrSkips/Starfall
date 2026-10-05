@@ -1,12 +1,13 @@
-# Handoff T-00-01: art-direction exploration (Claude → ChatGPT)
+# Handoff T-00-01: art-direction exploration (Claude → Astra)
 
-**Zack: how to relay this.** Copy everything inside the SEND TO CHATGPT block into a new ChatGPT chat. Attach **all your art-style reference images** and name them REF-01, REF-02, and so on, in the order you attach them. When ChatGPT replies, save its images into `art/concepts/` and paste its RETURN text into `handoffs/T-00-01_RETURN.md` (or paste it to Claude).
+**Zack: how to relay this.** Copy everything inside the SEND TO ASTRA block into a new Astra chat and attach your **art-style video** (and any still images). Astra doesn't need the rest of the repo. When Astra replies, save its images into `art/concepts/`, plus the reference frames it picked into `art/refs/` if it can export them. Then paste its RETURN text into `handoffs/T-00-01_RETURN.md`, or paste it to Claude.
+If Astra can't watch video, take 4–6 screenshots of the moments that best show the style, attach those instead, and name them REF-01, REF-02, and so on.
 
 ````text
-===== SEND TO CHATGPT =====
+===== SEND TO ASTRA =====
 HANDOFF
 Task ID: T-00-01
-From / To: Claude (integration owner) → ChatGPT
+From / To: Claude (integration owner) → Astra (art exploration)
 Project / Version: Starfall Forge (working title), a Roblox tycoon / v00
 Parent master-prompt revision: MP-r1
 Baseline commit or snapshot: "v00 docs" (no game content yet)
@@ -20,7 +21,7 @@ Context and approved decisions:
 - All in-game assets will be AI-generated 3D (Roblox mesh generation plus procedural parts), so the style must be achievable with chunky, bevelled, low-to-mid detail shapes, solid or simple-gradient materials, and glow and particles. No photoreal or high-frequency texture detail.
 
 Inputs and attachments:
-REF-01… (Zack's style references). Base every direction on them. Don't copy any distinctive character, logo, or environment from them.
+A video from Zack that shows the art style he wants (plus any stills). First pick 4–6 representative moments and label them REF-01… with timestamps (for example, "REF-01 @ 0:42: wide environment shot"). Use those IDs from then on. Base every direction on them. Don't copy any distinctive character, logo, or environment from the video. If you can't actually view the video, stop and say so instead of guessing.
 
 Owned files / nodes / assets: art/concepts/CON-01..CON-03 (new). Nothing else.
 Allowed edits and excluded scope: Images and written analysis only. No code. Don't design UI screens yet.
@@ -38,13 +39,14 @@ Acceptance criteria:
 - Hex palettes provided. Everything labeled as concept reference, not a game asset.
 
 Verification to perform: Look at each generated image before returning it, and say if anything came out wrong (text artifacts, non-Roblox avatars, unreadable meteor).
-Known limitations / uncertainties: Perspective images don't define real dimensions. Claude will build measured geometry separately.
+Known limitations / uncertainties: Perspective images don't define real dimensions. Claude will build measured geometry separately. If you can't generate images, return Status: partial, with the reference analysis plus 3 complete, ready-to-use image prompts.
 
 Return format and next recipient: Reply using this exact format, and Zack will relay it to Claude:
 RETURN
 Task ID / Version / Baseline: T-00-01 / v00 / v00 docs
 Status: completed | partial | blocked | needs decision
 Summary of actual result:
+Reference frames picked (REF ID, timestamp, what it shows):
 Reference observations (per REF):
 Directions (CON-01..03: name, palette hex, materials, lighting, rarity readability, feasibility, risks):
 Concept sanity check:

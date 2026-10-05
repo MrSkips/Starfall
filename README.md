@@ -30,7 +30,7 @@ Start here: **PROJECT_STATE.md**, then the active `versions/vNN/MASTER_PROMPT.md
 | Shared project folder | **Verified** (read/write here) | **Unverified** | ChatGPT gets files only when Zack attaches them |
 | Roblox Studio MCP: inspect, run Luau, edit scripts, playtest, screenshot | **Verified** (1 Studio, "Place1", Edit mode) | Unverified | Only Claude has a confirmed Studio connection |
 | Studio AI generation: mesh, material, texture, procedural model | Available, **not yet tested** | n/a | Studio MCP tools (Roblox Cube) |
-| Figma MCP | Connected. Account is on a student team with a **View** seat, so write access is **unverified** | Unverified | Test by creating a draft file in v02 |
+| Figma MCP | **Verified write** (2026-10-05): created draft file "Starfall Forge – UI" (https://www.figma.com/design/epTn2brL2LP9N8DjjV7YNk) and a test frame. View seat on a student team, so read tools (screenshots, design context) are limited to about 6–20 calls/month until the seat is upgraded | Unverified | Zack should get Education plan verification and switch to a Full seat |
 | Image generation | Figma generate_image exists but uses Figma AI credits (unverified quota) | **Expected (ChatGPT image gen)**, relayed by hand | ChatGPT is the main mockup source |
 | Blender scripting | Unavailable on your computer's shell. The cloud workspace may be able to install it (unverified) | Unverified | Not needed through v02 |
 | Audio and music generation | Unavailable | Unverified | Use Roblox's licensed audio library or procedural SFX. Track rights |
