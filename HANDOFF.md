@@ -22,7 +22,7 @@ Last updated: 2026-10-05 by Claude.
 | Core loop: meteors, carry, deposit, machines, 6 upgrades, showers, Starheart | verified (solo) | 2-player Starheart and real phones are **not** verified |
 | Map (Blender `SF_Map.fbx`) | verified | Visual meshes only; collision is the old invisible greybox parts |
 | Models (`SF_Models.fbx`): 4 machines, Conveyor, Bellows, Boots, pads, sign, 5 meteors, Starheart | verified | Templates in `ServerStorage.Art`; tools `ApplyMap`, `ApplyModels` |
-| UI in game (HUD, Forge panel, Collection, Settings) | verified | Built to Astra UI-02 **copper/teal** palette (D-017) |
+| UI in game (HUD, Forge panel, Collection, Settings) | verified | Asteroid layout in the **lime/cyan/red reference palette** with black text outlines (D-021) |
 | Sound + VFX (`StarterPlayerScripts.FX`) | verified (PC) | Music, 9 SFX, landing/payout/build effects. Zack hasn't heard the sounds yet |
 | Saving progress (DataStore) | **planned** | Biggest gap: players lose everything on leave |
 | Tutorial, Codex persistence, offline earnings, Supernova | planned | Step 3 |
@@ -50,11 +50,11 @@ Last updated: 2026-10-05 by Claude.
    - Supernova
    Saving progress comes first because monetization depends on it.
 3. Measure free-player pacing for real: time to buy everything and Stardust per minute. This replaces the 15–25 min guess.
-4. When Zack approves: apply the new UI palette in the game (see request R-1).
+4. Done: lime/cyan/red palette is applied in the game (D-021).
 
 ### ChatGPT / Codex
 1. **Produce the T-03-01 RETURN.** Use the brief in `handoffs/T-03-01_chatgpt_monetization.md`, including section L (pets + eggs), and save it as `handoffs/T-03-01_RETURN.md`. The brainstorm itself has not been done yet. Only the integration brief exists.
-2. If you change the UI palette again, fix button text contrast (request R-2) and log the change in `docs/DECISIONS.md` as **Needs Zack**.
+2. Figma: keep the screens in sync with the in-game palette (D-021). Button labels are white with a black outline.
 
 ### Astra
 - Nothing assigned. Possible next: game thumbnail and icon once the name is picked (D-013), and pet concept art after T-03-01 returns.
@@ -68,13 +68,12 @@ Last updated: 2026-10-05 by Claude.
 ## 5. Open requests between agents
 | ID | From → To | Request | Status |
 |---|---|---|---|
-| R-1 | Codex → Claude | The UI was recolored to lime/cyan/red on dark grey (`art/concepts/UI-02/REFERENCE-COLORS.md`). Apply it in the game | **Blocked:** needs Zack approval. It replaces D-017 |
-| R-2 | Claude → ChatGPT/Codex | In the lime/cyan palette, white button text on lime #6FFF10 (≈1.3:1 contrast) and cyan #19F0F5 (≈1.4:1) is unreadable on phones without the outline. Use near-black text #080809 on lime/cyan (≈15:1), and keep white text for red and grey | Open |
-| R-3 | Claude → ChatGPT/Codex | Don't copy a specific hit game's palette 1:1. "Steal an Egg" colors make us look like a clone (ROADMAP top risk). Shift the hues so they're clearly our own (e.g. star-gold + teal + ember instead of lime + cyan + red) | Open |
+| R-1 | Codex → Claude | Apply the lime/cyan/red palette in the game | **Done** (D-021, Zack approved) |
+| R-2 | Claude → ChatGPT/Codex | In the lime/cyan palette, white button text on lime #6FFF10 (≈1.3:1 contrast) and cyan #19F0F5 (≈1.4:1) is unreadable on phones without the outline. Use near-black text #080809 on lime/cyan (≈15:1), and keep white text for red and grey | **Closed:** Zack chose white text with a black outline |
+| R-3 | Claude → ChatGPT/Codex | Don't copy a specific hit game's palette 1:1. "Steal an Egg" colors make us look like a clone (ROADMAP top risk). Shift the hues so they're clearly our own (e.g. star-gold + teal + ember instead of lime + cyan + red) | **Closed:** Zack says copying the palette is fine |
 
 ## 6. Decisions waiting on Zack
 - **D-020:** Robux eggs, yes or no. Stardust eggs are fine either way.
-- **UI palette:** keep the in-game copper/teal (D-017), or switch to Codex's lime/cyan/red (R-1)?
 - **D-013:** the final game name, needed before the thumbnail, store page and launch.
 - Whether the "Claude outputs/" folder should stay. It duplicates files in `art/models/`. Claude suggests ignoring it in git.
 
