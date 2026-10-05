@@ -15,3 +15,5 @@
 | D-012 | 2026-10-05 | A meteor is claimed by whoever picks it up first. You compete on the way *to* it, never take it from a carrier (no Bump in the MVP) | Adopted | Astra concept check, design §6 |
 | D-013 | 2026-10-05 | "Starfall Forge" stays a working title: the style reference video advertises a "Starfall Event". Rename before publishing | Open | Astra concept check |
 | D-014 | 2026-10-05 | Shower interval is 120 s for v01 testing (design target 360 s) | Temporary | Faster playtests |
+| D-015 | 2026-10-05 | Zack: the greybox looks too blocky. Pulled an art pass forward: 12 AI meshes generated into ServerStorage.Art and a BuildArt tool written (terrain crater, mesas, lighting, plot dressing). **Paused before running at Zack's request ("focus on UI")** | Paused | Zack |
+| D-016 | 2026-10-05 | UI built in Figma (tokens, 20+ components, 6 screens), then as native Roblox UI (Kit, Panels, ClientMain). Shop purchases go through a validated RequestPurchase remote | Done | docs/UI.md |

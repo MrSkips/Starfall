@@ -7,3 +7,8 @@
 - Gameplay: meteor warnings, falls, 5 mutations, pickup, carry, drop, and deposit, processing queue, 6 purchase pads, 120 s showers with a Starheart that needs 2 carriers, onboarding meteor, guaranteed Molten on 3rd deposit, DropOnPlot A/B.
 - Tooling: [Metrics] logging, Studio-only DebugCall test hook, tools/export_scripts.py.
 - Art: CON-01 approved; docs/ART_BIBLE.md rev 1.
+
+## UI pass (2026-10-05)
+- Figma: tokens, text and effect styles, 14 icons, 20+ components, 6 screens (HUD desktop and mobile, Shop desktop and mobile, Codex, Settings).
+- Roblox: new UI.Kit and UI.Panels modules; ClientMain HUD rebuilt from Figma; Shop, Codex, and Settings panels; RequestPurchase remote; Found_/Owned_ attributes for UI state.
+- Art (paused): 12 generated meshes in ServerStorage.Art; ServerStorage.Tools.BuildArt written but **not run**.

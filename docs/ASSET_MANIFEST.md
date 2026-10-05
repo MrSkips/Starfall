@@ -9,3 +9,5 @@ Status values: planned · concept only · generated · imported · verified · r
 | CON-01 | Concept | Sunlit Toy Foundry gameplay mockup | Astra image_gen | art/concepts/CON-01/PROMPT.md | n/a | Astra | **concept only (APPROVED)** | art/concepts/CON-01 |
 | CON-02, CON-03 | Concept | Orbital Workshop, Prism Starworks | Astra image_gen | PROMPT.md each | n/a | Astra | rejected (kept for reference) | art/concepts/ |
 | UI-01, UI-02 | Concept | Desktop and mobile HUD mockups | Astra image_gen | art/concepts/CON-01/UI/NOTES-AND-PROMPTS.md | n/a | Astra | concept only | art/concepts/CON-01/UI |
+| ART-MESH-01..12 | Mesh | Crusher, Smelter, Forge, StarAnvil, MeteorRock, Tree, Meteorite (landmark), Boulders, Fence, Lamp, Crates, Bush | Roblox Studio generate_mesh (Cube) | prompts in session log (CON-01 palette) | n/a | Claude | **generated (not placed)** | ServerStorage.Art |
+| UI-FIGMA-01 | UI | Figma design system and screens | Figma MCP use_figma | docs/UI.md | n/a | Claude | **generated** | figma.com/design/epTn2brL2LP9N8DjjV7YNk |
