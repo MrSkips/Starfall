@@ -20,3 +20,4 @@
 | D-017 | 2026-10-05 | UI direction = Astra UI-02 "Asteroid" (charcoal panels, copper actions, teal progress), copied 1:1 into Roblox. Supersedes the rev-1 cream UI (D-016) | Approved by Zack ("copy 1:1") | docs/UI.md |
 | D-018 | 2026-10-05 | Figma ownership: Astra owns the UI-02 design file; Claude owns the Roblox implementation and reads Astra's file (read-only) | Adopted | Single writer per target |
 | D-019 | 2026-10-05 | Place published privately to Roblox (placeId 88630827996555) so the Asset Manager and DataStores work | Done (Zack) | |
+| D-020 | 2026-10-05 | Add Pets + Eggs (Stardust eggs always available). Robux eggs only if Roblox paid-random-item rules are met (odds shown before purchase, PolicyService region gate, every pet also obtainable free). Supersedes the egg part of D-006 | **Needs Zack: Robux eggs yes/no after T-03-01 return** | Zack request |
