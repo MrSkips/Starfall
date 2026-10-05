@@ -12,3 +12,11 @@ Status values: planned · concept only · generated · imported · verified · r
 | ART-MESH-01..12 | Mesh | Crusher, Smelter, Forge, StarAnvil, MeteorRock, Tree, Meteorite (landmark), Boulders, Fence, Lamp, Crates, Bush | Roblox Studio generate_mesh (Cube) | prompts in session log (CON-01 palette) | n/a | Claude | **generated (not placed)** | ServerStorage.Art |
 | UI-FIGMA-01 | UI | Figma design system and screens | Figma MCP use_figma | docs/UI.md | n/a | Claude | **generated** | figma.com/design/epTn2brL2LP9N8DjjV7YNk |
 | UI-ICON-01..21 | Icon | 21 UI icons (star, gear, book, forge ×3, lock, chevron, arrow, mut_* ×5, meteor_* ×6) | Astra Figma SVG → cairosvg PNG 256px | art/ui-icons/svg | n/a | Astra (design), Claude (export) | **imported (rbxassetid in UI.Icons)** | StarterPlayerScripts.UI.Icons |
+
+## Blender models (2026-10-05): produced, not yet imported/verified in Studio
+| File | Contents | Source script | Studio tool |
+|---|---|---|---|
+| art/models/SF_Models.fbx | Crusher, Smelter, Forge, StarAnvil, Conveyor, Bellows, CarryBoots1, Pad, Sign, 5 mutation meteors, Starheart | tools/blender/build_models.py | ServerStorage.Tools.ApplyModels |
+| art/models/SF_Map.fbx | Crater floor + meteorite, cliffs, 8 ramps, plot pads, fences, path ring, lamps, trees, outer mesas (visual only) | tools/blender/build_map.py | ServerStorage.Tools.ApplyMap |
+| art/models/SF_Machines.fbx | Superseded by SF_Models.fbx (machines only) | tools/blender/build_machines.py | (ApplyMachineModels now forwards to ApplyModels) |
+Runtime hooks: MeteorService welds Art.Meteors[mutation] onto the hitbox ball; PurchaseService toggles pad Visual; MachineAnimator animates Conveyor rollers, Bellows pump, Boots bob/spin.

@@ -17,3 +17,6 @@
 - Rebuilt UI.Kit (exact Figma tokens), UI.Panels (Collection, Your Forge, Settings), ClientMain (desktop 1440×810 and mobile 960×540 layouts, Forge Activity, notices, shower-active banner).
 - 21 icons exported from Astra's Figma and uploaded. MachineService sends job/idle notices and drives Crusher ProcessFX.
 - Place published privately (88630827996555).
+
+## 2026-10-05
+- Blender map (SF_Map.fbx) + all gameplay models (SF_Models.fbx): props, purchase pads, sign, mutation meteors, Starheart. Studio tools ApplyMap / ApplyModels written; awaiting import.
