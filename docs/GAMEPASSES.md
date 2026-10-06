@@ -52,3 +52,18 @@ Note on Lucky Sky: it boosts the odds of free drops, so it is not a paid random 
 - Supernova Head Start: "Keep your Conveyor, Smelter, Meteor Chute and Carry Boots after every Supernova."
 - Plot Themes: "Recolour your production line: Ember, Frost, Nebula or Gold."
 - Summon Meteor Shower: "Call a meteor shower for the whole server right now!"
+
+
+## Live IDs + status (D-029, 2026-10-06)
+Wired in `Config.GamePasses` (MonetizationService). Ownership is checked on join and granted instantly after an in-game purchase. Verified in Studio (the place owner owns every pass automatically, so each effect was checked with that).
+| Pass | ID | Price now | Notes |
+|---|---|---|---|
+| 2x Stardust | 2006391828 | 399 | payout x2 |
+| VIP | 2006619881 | 199 | +10% payout, [VIP] chat tag (ChatTags), star over the plot sign |
+| 2 Additional Pets | 2008934412 | **29** | plan said 299; check this price |
+| Triple Hatch | 2007039848 | 349 | "x3" button on each egg (opens the Shop without the pass) |
+| Comet Sneakers | 2004921816 | 149 | walk x1.25, +3 carry speed |
+| Supernova Head Start | 2006727844 | 199 | keeps Conveyor, Smelter, Meteor Chute, Carry Boots |
+| Special Plot Themes | 2006355827 | 99 | picker in the Shop card (Default/Ember/Frost/Nebula/Gold), saved in the profile |
+| Lucky Sky | 2006961749 | 349 | non-Normal weights x1.5 on your personal rolls; both odds tables shown on the card |
+Managed pricing is on, so the shop reads prices live from Roblox. Summon Meteor Shower (developer product) is not created yet; send its ID to wire it.

@@ -40,3 +40,19 @@
 - Client Perf module: distance culling in LineAnimator, MachineAnimator and PetFollow; product cap; HUD throttling. Phones default to Reduced effects, which now also disables Depth of Field, Sun Rays and remote pet sparkles.
 - Fix: MachineAnimator streaming bug (machines that streamed in never animated).
 - docs/GAMEPASSES.md: 8 passes + 1 developer product with prices, effects and Creator Hub steps.
+
+## 2026-10-06: Zack's 1-hour playtest fixes (D-028)
+- HUD: Forge Activity panel + centre notices replaced by one corner column (desktop bottom-right, phones top-right): message feed (payouts merge, fades after ~3 s), compact Forge status card (tap to open Forge), PET PERKS card with FETCH/BEACON cooldown bars. Core Breach result goes to the feed too (HUD.FeedPush).
+- Eggs/pets no longer cut off in the Pets panel and hatch reveal (Panels.frameModel aims at the bounding-box centre).
+- Pets follow the real floor under them and stay on the owner's side of walls (PetFollow raycasts); fixes clipping through the bridge/props.
+- Forge panel: every item has a plain Desc, payout items show "a Normal meteor pays X now, Y after", locked items say what is missing + where and the button becomes "Go to <item>"; locked tabs are grey. Pad + ghost labels show a short effect line.
+- Crusher with no Conveyor crunches + sells on the spot (burst, BaseProcessSec 3 -> 1.5). With the Conveyor, products only ride up to the last machine you have built and sell there (no more invisible path over empty gaps). Every machine plays its animation + a burst when a product enters it (Visual PulseAt).
+- Fetch pets skip the meteor your guide beam points at, meteors you are walking toward, and meteors next to other players. Pet models carry PerkReadyAt/PerkCd for the HUD.
+- Core Breach: events are keyed by round (an early-broken core's timer could end the next event), CoreDamage reset at the end of every event.
+- Pets: Sell (Stardust by rarity x egg price; equipped pets can't be sold), Pet Fuser plot item (1,000, needs Smelter; Tools.ApplyFuser part-built model with orbit animation + FusePrompt): 3 same pets -> Gold (x2.5 stats, cooldowns x0.8), 3 Gold -> Diamond (x6, x0.6). Tier aura + sparkles on models, GOLD/DIAMOND ribbon on tiles, fusion reveal.
+- Plateau retune: Crusher Mk II 2,500 and +1 payout, Comet Boots 3,500, Forge Drone 5,000, Twin Rack 7,500, Starforge Core 12,000, Frost Egg 15,000, Cosmic Egg 75,000.
+
+## 2026-10-06: Robux game passes (D-029)
+- Config.GamePasses (8 IDs) + Config.Pass tuning. New server MonetizationService (UserOwnsGamePassAsync on join with retries, PromptGamePassPurchaseFinished grants live, Pass_<key> player attributes, VIP plot star, Plot Themes recolour of belts + silo, PassAction remote).
+- Hooks: MachineService payout x PayoutMult, PetService slots +2 / cap 8, HatchEgg count 3, CarryService walk/carry speed, MeteorService Lucky Sky roll, Main Supernova keep list.
+- Client: Shop panel (live icons + prices, Owned state, theme picker, Lucky Sky odds), Shop button (desktop rail, phones next to the gear), x3 hatch button, faster queued hatch reveals, ChatTags LocalScript, PetFollow slots 7-8.
