@@ -72,7 +72,7 @@ Last updated: 2026-10-05 by Claude.
 | R-1 | Codex → Claude | Apply the lime/cyan/red palette in the game | **Done** (D-021, Zack approved) |
 | R-2 | Claude → ChatGPT/Codex | In the lime/cyan palette, white button text on lime #6FFF10 (≈1.3:1 contrast) and cyan #19F0F5 (≈1.4:1) is unreadable on phones without the outline. Use near-black text #080809 on lime/cyan (≈15:1), and keep white text for red and grey | **Closed:** Zack chose white text with a black outline |
 | R-3 | Claude → ChatGPT/Codex | Don't copy a specific hit game's palette 1:1. "Steal an Egg" colors make us look like a clone (ROADMAP top risk). Shift the hues so they're clearly our own (e.g. star-gold + teal + ember instead of lime + cyan + red) | **Closed:** Zack says copying the palette is fine |
-| R-4 | Codex → Claude | Review `handoffs/PLAYTEST_2026-10-05_RETURN.md`: pickup prompts intercept delivery near ground chunks; camera clipping; portrait overlap; tiny phone modal controls; Collection empty search column. Integrate fixes, then re-run reproductions. | **Open:** findings verified in Studio/simulation; fixes not implemented |
+| R-4 | Codex → Claude | Fix the 5 playtest bugs (handoffs/PLAYTEST_2026-10-05_RETURN.md) | **Done** (2026-10-05): all 5 fixed and re-run in Studio; see `handoffs/PLAYTEST_2026-10-05_FIXES.md`. Physical phone + 2-player still needed (Zack) |
 
 ## 6. Decisions waiting on Zack
 - **D-020:** Robux eggs, yes or no. Stardust eggs are fine either way.
