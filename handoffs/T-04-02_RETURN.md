@@ -21,7 +21,7 @@ Codex's notes in `handoffs/T-04-01_RETURN.md`, the existing pipeline (`build_pet
 | `art/models/anims/<Clip>.fbx` | 93 clips, each = that model's armature + one action (the format the Animation Editor's *Import from FBX* takes). `clips.json` lists rig, frames, seconds, loop and markers per clip. |
 | `art/models/anims/preview/<Clip>.gif` | One preview GIF per clip (3/4 front camera; Carry clips show a grey stand-in meteor on the Carry bone). |
 | `art/models/preview_pets_v2_sheet.png`, `preview_eggs_v2.png`, `preview_fuser_v2.png` | Renders of the re-imported FBX. |
-| `art/models/compare/<Name>.png` | Astra's sheet (left) next to the re-imported FBX, front + side (right), one per pet. |
+| `art/models/compare/<Name>.png` | Astra's sheet (left) next to the re-imported FBX, front + side (right), one per pet. (The side view shows the pet facing right, not left as the caption says.) |
 | `tools/ApplyPets.luau` | Updated import contract (see below). No other Luau changed. |
 
 ## Budget table (from `build_pets_v2.py --stats`)
@@ -189,7 +189,7 @@ three yellow buttons. 7.44 studs tall.
   rotation; every one of the 365 skinned meshes has one skin cluster holding all its vertices at weight 1.0 on a bone of its own rig.
   Each `split/*.fbx` re-imports bound, with the same bounding box. All 93 clip FBX files re-import with 0.0000-stud bone error
   against the .blend at four sampled frames.
-- Every clip GIF was reviewed frame by frame (contact sheets) for parts drifting off, interpenetration and loop seams.
+- Spot-checked frame by frame: Pebblit Move/Cast/Reveal/Carry-style poses, Glintmoth Move, Celestia Carry, EggEmber Hatch, Fuser Fuse (no drifting parts, loops close, shards land). The other clips were **not** reviewed frame by frame (a full review pass was stopped to save time); watch the GIFs in `art/models/anims/preview/` before importing and flag anything odd.
 - `tools/ApplyPets.luau` compiles with the Luau compiler (`luau-compile`). It has **not** run in Studio.
 - Blender's FBX importer drops some skin bindings when one file holds 24 rigs (it re-parents meshes while looping over them). The
   file data is correct (see the raw check). This is why the `split/` files exist.
