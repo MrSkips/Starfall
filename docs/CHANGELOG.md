@@ -56,3 +56,11 @@
 - Config.GamePasses (8 IDs) + Config.Pass tuning. New server MonetizationService (UserOwnsGamePassAsync on join with retries, PromptGamePassPurchaseFinished grants live, Pass_<key> player attributes, VIP plot star, Plot Themes recolour of belts + silo, PassAction remote).
 - Hooks: MachineService payout x PayoutMult, PetService slots +2 / cap 8, HatchEgg count 3, CarryService walk/carry speed, MeteorService Lucky Sky roll, Main Supernova keep list.
 - Client: Shop panel (live icons + prices, Owned state, theme picker, Lucky Sky odds), Shop button (desktop rail, phones next to the gear), x3 hatch button, faster queued hatch reveals, ChatTags LocalScript, PetFollow slots 7-8.
+
+## 2026-10-06: Pets v2 in Blender (T-04-02, produced, not integrated)
+- `tools/blender/build_pets_v2.py`: 18 pets rebuilt from Astra's sheets (`art/concepts/PETS/`), 5 eggs incl. the new Core Egg, the Pet Fuser as a Blender toy machine (rigid `PetFuser` for the plot, rigged `FuserRig` for the reveal). Budgets enforced by the script (pets 516-940 tris, eggs 670-780, Fuser 2,094).
+- Rigs: one armature per model (<= 12 bones, shared bone names, every part rigid on one bone, `Carry` bone on FETCH pets); eggs split along a zig-zag crack into ShellBottom / ShellTop / Shard_1..5.
+- 93 clips (`art/models/anims/<Clip>.fbx` + preview GIFs, `clips.json`): per pet Idle, Move, Cast, Reveal (+ Carry for FETCH pets); per egg Idle, Hatch, HatchFast (PetOut frame 51 / 17); Fuser_Fuse (PetOut 44).
+- FBX export fixed: axis change baked into the data (axis_forward Z, axis_up Y), identity node rotations (the old pets FBX imported lying on its face). `art/models/split/` has one FBX per model as a fallback.
+- `tools/ApplyPets.luau`: v2 rigs (bones re-parented under the PrimaryPart, AnimationController + Animator), Core Egg, Coreling + Magmacore meshes, PetFuser Visual on every plot (FusePrompt on Base, Collider kept), only replaces imported templates.
+
