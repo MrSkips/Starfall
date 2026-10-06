@@ -20,6 +20,16 @@ PALETTE = {  # sRGB hex -> used for previews; Roblox gets the same values via th
     "Red": ("D95542", 0.0, 0.55, 0), "Cream": ("FFF0CF", 0.0, 0.6, 0), "Steel": ("344658", 0.55, 0.38, 0),
     "SteelLight": ("6E7F93", 0.6, 0.32, 0), "Dark": ("1F2430", 0.2, 0.6, 0), "Yellow": ("FFC83D", 0.0, 0.5, 0),
     "Glow": ("FF9A3C", 0.0, 0.4, 7), "Gold": ("FFD24A", 0.3, 0.35, 5), "Ember": ("FF5A1E", 0.0, 0.5, 9),
+    # pets v2 (T-04-02, build_pets_v2.py): hex codes from Astra's sheets in art/concepts/PETS/. Emission > 0 = Neon in Roblox
+    "PebBody": ("8C8597", 0, .8, 0), "PebSpot": ("5E5868", 0, .8, 0), "PebCrystal": ("B9A8E0", 0, .3, 0),
+    "CinderBody": ("4A3B44", 0, .75, 0), "CinderGlow": ("FF7A2A", 0, .4, 8),
+    "RubBody": ("6E6585", 0, .8, 0), "RubSpike": ("C9B6A6", 0, .6, 0),
+    "KitBody": ("5A2E2A", 0, .75, 0), "DarkRock": ("3B3540", 0, .75, 0), "MawJaw": ("6B6470", 0, .7, 0),
+    "MawGlow": ("FFB13D", 0, .4, 7), "GoldGlow": ("FFE21B", 0, .4, 6),
+    "FrostCrystal": ("BDEBFF", 0, .25, 0), "FrostGlow": ("BDEBFF", 0, .3, 5), "GlacioBeak": ("3D5C8A", 0, .6, 0),
+    "AuroraBody": ("64DFD1", 0, .55, 0), "Cloud": ("FFE6F6", 0, .7, 0), "NebStar": ("B07CFF", 0, .5, 0),
+    "WhaleBelly2": ("4C64B8", 0, .6, 0), "Magenta": ("FF4FD8", 0, .45, 0), "CoreRed": ("FF3B1F", 0, .4, 8),
+    "CoreArmor": ("241E2C", 0, .7, 0), "Glass": ("BDEFFF", 0, .05, 0),
 }
 
 def srgb(h):
