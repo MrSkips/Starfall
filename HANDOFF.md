@@ -1,7 +1,7 @@
 # HANDOFF.md — the shared task board (Claude ⇄ ChatGPT/Codex ⇄ Astra ⇄ Zack)
 
 **Every agent: read this file first, and update your own section before you stop.**
-Last updated: 2026-10-06 by Claude (D-024 pet perks).
+Last updated: 2026-10-06 by Claude (D-025 personal meteors, Meteor Chute, Core Breach).
 
 ## 1. Rules of the road
 1. **One writer per target.** Only the owner listed in §3 edits a file or system. To change someone else's file, add a request to §5 instead.
@@ -26,7 +26,9 @@ Last updated: 2026-10-06 by Claude (D-024 pet perks).
 | Sound + VFX (`StarterPlayerScripts.FX`) | verified (PC) | Music, 9 SFX, landing/payout/build effects. Zack hasn't heard the sounds yet |
 | Saving progress (DataStore) | integrated | Works only in the published game or with Studio API access on; Studio test showed the offline fallback |
 | Supernova, quests + daily, streaks, tier-2 upgrades + gadgets | verified (solo, Studio) | D-023 |
-| Tutorial, offline earnings | planned | Step 3 |
+| Personal/shared meteors, Meteor Chute, Core Breach event + Core Egg | verified (solo, Studio) | D-025. Needs a 2+ player test: hidden meteors, shared core HP, tier fairness |
+| Tutorial | verified | Coach strip (Astra fixes) |
+| Offline earnings | planned | Step 3 |
 | Monetization plan | **planned** | Brief T-03-01 sent; no RETURN yet |
 | Pets + Stardust eggs + loop perks | verified (solo, Studio) | D-024 perks. Blender pet meshes (`art/models/SF_Pets.fbx`) wait on Zack's import, then Claude runs `ApplyPets`. Robux eggs still wait on D-020 |
 | `src/` script export | **missing** | Needs Zack to save `place/StarfallForge.rbxlx` |
