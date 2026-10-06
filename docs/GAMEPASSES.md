@@ -31,6 +31,11 @@ Note on Lucky Sky: it boosts the odds of free drops, so it is not a paid random 
 - Robux eggs: D-020 is still open. Under the brief they need odds shown, a PolicyService region gate, and every pet obtainable for free.
 - Anything that lowers other players' meteors or core damage.
 
+## Icons
+- Figma (editable components): https://www.figma.com/design/vQOPtmDmT77EdE0azufoCv
+- 512×512 PNGs ready to upload: `art/gamepass_icons/` (01_2x_Stardust … 09_Summon_Meteor_Shower). Roblox shows pass icons circle-cropped, so the key art sits in the centre.
+- `10_Shop_Button.png`: in-game HUD button that opens the store. Generic bag + star, no Roblox logo. Claude uploads it with the store UI.
+
 ## Creating them (Creator Hub)
 1. Go to create.roblox.com → Creations → Starfall Forge → **Monetization → Passes → Create a Pass**.
 2. Upload a 512×512 icon, then add the name and the description below. Click **Create Pass**.
