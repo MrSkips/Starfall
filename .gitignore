@@ -1,3 +1,5 @@
 *.rbxl.lock
 *.rbxlx.lock
 .env
+*.blend1
+__pycache__/

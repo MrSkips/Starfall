@@ -1,7 +1,7 @@
 # HANDOFF.md — the shared task board (Claude ⇄ ChatGPT/Codex ⇄ Astra ⇄ Zack)
 
 **Every agent: read this file first, and update your own section before you stop.**
-Last updated: 2026-10-06 by Claude (D-025 personal meteors, Meteor Chute, Core Breach).
+Last updated: 2026-10-06 by Claude (T-04-02: pets v2, eggs, Pet Fuser in Blender, rigged + animated; produced, not integrated).
 
 ## 1. Rules of the road
 1. **One writer per target.** Only the owner listed in §3 edits a file or system. To change someone else's file, add a request to §5 instead.
@@ -30,7 +30,7 @@ Last updated: 2026-10-06 by Claude (D-025 personal meteors, Meteor Chute, Core B
 | Tutorial | verified | Coach strip (Astra fixes) |
 | Offline earnings | planned | Step 3 |
 | Monetization plan | **planned** | Brief T-03-01 sent; no RETURN yet |
-| Pets + Stardust eggs + loop perks | verified (solo, Studio) | D-024 perks. Blender pet meshes (`art/models/SF_Pets.fbx`) wait on Zack's import, then Claude runs `ApplyPets`. Robux eggs still wait on D-020 |
+| Pets + Stardust eggs + loop perks | verified (solo, Studio) | D-024 perks. Robux eggs still wait on D-020. **Pets v2** (T-04-02, Astra's sheets): 18 rigged pets, 5 rigged eggs incl. Core Egg, Blender Pet Fuser, 93 animation clips are **produced, not integrated** (`art/models/SF_Pets_v2.fbx`, `art/models/anims/`); steps in `handoffs/T-04-02_RETURN.md` |
 | `src/` script export | **missing** | Needs Zack to save `place/StarfallForge.rbxlx` |
 
 ## 3. Owners
@@ -43,6 +43,8 @@ Last updated: 2026-10-06 by Claude (D-025 personal meteors, Meteor Chute, Core B
 
 ## 4. Task queues
 ### Claude (now → next)
+0. **Produced, not integrated (T-04-02, cloud session without Studio):** pets v2 from Astra's sheets. `tools/blender/build_pets_v2.py` -> `art/models/SF_Pets_v2.fbx` (+ `.blend`, `split/` one-file-per-model fallback): 18 rigged pets (Coreling + Magmacore now real models), 5 rigged eggs (new Core Egg), Pet Fuser (rigid, replaces the part-built ApplyFuser model) + FuserRig; 93 clips in `art/models/anims/` (Idle/Move/Cast/Carry/Reveal per pet, Idle/Hatch/HatchFast per egg, Fuser_Fuse) with preview GIFs; `tools/ApplyPets.luau` updated (rigs, CoreEgg, PetFuser Visual on every plot). Verified in Blender only (budgets, FBX re-import, raw skin data, clip round-trip). **Next Studio session:** follow `handoffs/T-04-02_RETURN.md` (import -> ApplyPets -> OptimizeParts -> playtest, then import + publish the clips into `Config.PetAnims` and switch PetFollow / hatch + fusion reveals to `Animator:LoadAnimation`).
+1. **Done (D-028, verified solo in Studio):** all items from Zack's 1-hour playtest (see docs/CHANGELOG.md). Follow-ups: real-phone check of the corner HUD, re-measure pacing after the retune (the Pet Fuser Blender model is item 0).
 1. **Waiting:** T-03-01 RETURN (the monetization brainstorm). When it arrives, follow `handoffs/T-03-01_CLAUDE_INTEGRATION.md`:
    - write `docs/MONETIZATION.md` with an accept / revise / reject table
    - build only the launch set, with server-side receipt handling
@@ -59,9 +61,12 @@ Last updated: 2026-10-06 by Claude (D-025 personal meteors, Meteor Chute, Core B
 3. **Produced / verified QA evidence (2026-10-05):** Zack requested an hour playtest. About 61 minutes of Studio QA, 34 logged deposits, desktop plus iPhone/Galaxy simulation. Five confirmed findings and explicit limitations are in `handoffs/PLAYTEST_2026-10-05_RETURN.md`; console evidence is in `handoffs/PLAYTEST_2026-10-05_LOG.md`. Fixes are proposed, not integrated. Play stopped and default viewport restored; game source unchanged.
 
 ### Astra
+- **T-04-01:** pet model reference sheets for the 18 pets (+ tier examples, scale lineup, eggs): produced by Codex (see ChatGPT / Codex 0), used by Claude for the T-04-02 Blender models.
 - Nothing assigned. Possible next: game thumbnail and icon once the name is picked (D-013), and pet concept art after T-03-01 returns.
 
 ### Zack
+- **Passes are wired (D-029).** Check the "2 Additional Pets" price (29 vs planned 299). Create the Summon Meteor Shower developer product if you want it and send the ID.
+0. **Save the place now (Ctrl+S / publish):** the D-028 changes live only in the open Studio session. Then replay: Core Breach twice in one session, Pet Fuser (Forge > Pet Fuser), Sell mode in Pets.
 1. Save the place to `place/StarfallForge.rbxlx` (File → Save to File As), then publish. To test saving inside Studio, turn on Game Settings → Security → Enable Studio Access to API Services.
 2. Send the T-03-01 brief to ChatGPT and save its RETURN.
 3. Decide the open items in §6.

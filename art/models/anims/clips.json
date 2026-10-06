@@ -1,0 +1,779 @@
+{
+ "Aurorabe_Cast": {
+  "frames": 21,
+  "loop": false,
+  "markers": {},
+  "model": "PetAurorabe",
+  "rig": "PetAurorabe__Rig",
+  "seconds": 0.7
+ },
+ "Aurorabe_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "PetAurorabe",
+  "rig": "PetAurorabe__Rig",
+  "seconds": 2.0
+ },
+ "Aurorabe_Move": {
+  "frames": 18,
+  "loop": true,
+  "markers": {},
+  "model": "PetAurorabe",
+  "rig": "PetAurorabe__Rig",
+  "seconds": 0.6
+ },
+ "Aurorabe_Reveal": {
+  "frames": 36,
+  "loop": false,
+  "markers": {},
+  "model": "PetAurorabe",
+  "rig": "PetAurorabe__Rig",
+  "seconds": 1.2
+ },
+ "Celestia_Carry": {
+  "frames": 30,
+  "loop": true,
+  "markers": {},
+  "model": "PetCelestia",
+  "rig": "PetCelestia__Rig",
+  "seconds": 1.0
+ },
+ "Celestia_Cast": {
+  "frames": 21,
+  "loop": false,
+  "markers": {},
+  "model": "PetCelestia",
+  "rig": "PetCelestia__Rig",
+  "seconds": 0.7
+ },
+ "Celestia_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "PetCelestia",
+  "rig": "PetCelestia__Rig",
+  "seconds": 2.0
+ },
+ "Celestia_Move": {
+  "frames": 18,
+  "loop": true,
+  "markers": {},
+  "model": "PetCelestia",
+  "rig": "PetCelestia__Rig",
+  "seconds": 0.6
+ },
+ "Celestia_Reveal": {
+  "frames": 36,
+  "loop": false,
+  "markers": {},
+  "model": "PetCelestia",
+  "rig": "PetCelestia__Rig",
+  "seconds": 1.2
+ },
+ "Cinderpup_Carry": {
+  "frames": 30,
+  "loop": true,
+  "markers": {},
+  "model": "PetCinderpup",
+  "rig": "PetCinderpup__Rig",
+  "seconds": 1.0
+ },
+ "Cinderpup_Cast": {
+  "frames": 21,
+  "loop": false,
+  "markers": {},
+  "model": "PetCinderpup",
+  "rig": "PetCinderpup__Rig",
+  "seconds": 0.7
+ },
+ "Cinderpup_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "PetCinderpup",
+  "rig": "PetCinderpup__Rig",
+  "seconds": 2.0
+ },
+ "Cinderpup_Move": {
+  "frames": 18,
+  "loop": true,
+  "markers": {},
+  "model": "PetCinderpup",
+  "rig": "PetCinderpup__Rig",
+  "seconds": 0.6
+ },
+ "Cinderpup_Reveal": {
+  "frames": 36,
+  "loop": false,
+  "markers": {},
+  "model": "PetCinderpup",
+  "rig": "PetCinderpup__Rig",
+  "seconds": 1.2
+ },
+ "Coreling_Carry": {
+  "frames": 30,
+  "loop": true,
+  "markers": {},
+  "model": "PetCoreling",
+  "rig": "PetCoreling__Rig",
+  "seconds": 1.0
+ },
+ "Coreling_Cast": {
+  "frames": 21,
+  "loop": false,
+  "markers": {},
+  "model": "PetCoreling",
+  "rig": "PetCoreling__Rig",
+  "seconds": 0.7
+ },
+ "Coreling_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "PetCoreling",
+  "rig": "PetCoreling__Rig",
+  "seconds": 2.0
+ },
+ "Coreling_Move": {
+  "frames": 18,
+  "loop": true,
+  "markers": {},
+  "model": "PetCoreling",
+  "rig": "PetCoreling__Rig",
+  "seconds": 0.6
+ },
+ "Coreling_Reveal": {
+  "frames": 36,
+  "loop": false,
+  "markers": {},
+  "model": "PetCoreling",
+  "rig": "PetCoreling__Rig",
+  "seconds": 1.2
+ },
+ "EggCore_Hatch": {
+  "frames": 72,
+  "loop": false,
+  "markers": {
+   "Crack": 48,
+   "PetOut": 51
+  },
+  "model": "EggCore",
+  "rig": "EggCore__Rig",
+  "seconds": 2.4
+ },
+ "EggCore_HatchFast": {
+  "frames": 27,
+  "loop": false,
+  "markers": {
+   "Crack": 15,
+   "PetOut": 17
+  },
+  "model": "EggCore",
+  "rig": "EggCore__Rig",
+  "seconds": 0.9
+ },
+ "EggCore_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "EggCore",
+  "rig": "EggCore__Rig",
+  "seconds": 2.0
+ },
+ "EggCosmic_Hatch": {
+  "frames": 72,
+  "loop": false,
+  "markers": {
+   "Crack": 48,
+   "PetOut": 51
+  },
+  "model": "EggCosmic",
+  "rig": "EggCosmic__Rig",
+  "seconds": 2.4
+ },
+ "EggCosmic_HatchFast": {
+  "frames": 27,
+  "loop": false,
+  "markers": {
+   "Crack": 15,
+   "PetOut": 17
+  },
+  "model": "EggCosmic",
+  "rig": "EggCosmic__Rig",
+  "seconds": 0.9
+ },
+ "EggCosmic_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "EggCosmic",
+  "rig": "EggCosmic__Rig",
+  "seconds": 2.0
+ },
+ "EggEmber_Hatch": {
+  "frames": 72,
+  "loop": false,
+  "markers": {
+   "Crack": 48,
+   "PetOut": 51
+  },
+  "model": "EggEmber",
+  "rig": "EggEmber__Rig",
+  "seconds": 2.4
+ },
+ "EggEmber_HatchFast": {
+  "frames": 27,
+  "loop": false,
+  "markers": {
+   "Crack": 15,
+   "PetOut": 17
+  },
+  "model": "EggEmber",
+  "rig": "EggEmber__Rig",
+  "seconds": 0.9
+ },
+ "EggEmber_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "EggEmber",
+  "rig": "EggEmber__Rig",
+  "seconds": 2.0
+ },
+ "EggFrost_Hatch": {
+  "frames": 72,
+  "loop": false,
+  "markers": {
+   "Crack": 48,
+   "PetOut": 51
+  },
+  "model": "EggFrost",
+  "rig": "EggFrost__Rig",
+  "seconds": 2.4
+ },
+ "EggFrost_HatchFast": {
+  "frames": 27,
+  "loop": false,
+  "markers": {
+   "Crack": 15,
+   "PetOut": 17
+  },
+  "model": "EggFrost",
+  "rig": "EggFrost__Rig",
+  "seconds": 0.9
+ },
+ "EggFrost_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "EggFrost",
+  "rig": "EggFrost__Rig",
+  "seconds": 2.0
+ },
+ "EggRock_Hatch": {
+  "frames": 72,
+  "loop": false,
+  "markers": {
+   "Crack": 48,
+   "PetOut": 51
+  },
+  "model": "EggRock",
+  "rig": "EggRock__Rig",
+  "seconds": 2.4
+ },
+ "EggRock_HatchFast": {
+  "frames": 27,
+  "loop": false,
+  "markers": {
+   "Crack": 15,
+   "PetOut": 17
+  },
+  "model": "EggRock",
+  "rig": "EggRock__Rig",
+  "seconds": 0.9
+ },
+ "EggRock_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "EggRock",
+  "rig": "EggRock__Rig",
+  "seconds": 2.0
+ },
+ "Emberkit_Cast": {
+  "frames": 21,
+  "loop": false,
+  "markers": {},
+  "model": "PetEmberkit",
+  "rig": "PetEmberkit__Rig",
+  "seconds": 0.7
+ },
+ "Emberkit_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "PetEmberkit",
+  "rig": "PetEmberkit__Rig",
+  "seconds": 2.0
+ },
+ "Emberkit_Move": {
+  "frames": 18,
+  "loop": true,
+  "markers": {},
+  "model": "PetEmberkit",
+  "rig": "PetEmberkit__Rig",
+  "seconds": 0.6
+ },
+ "Emberkit_Reveal": {
+  "frames": 36,
+  "loop": false,
+  "markers": {},
+  "model": "PetEmberkit",
+  "rig": "PetEmberkit__Rig",
+  "seconds": 1.2
+ },
+ "Flarefly_Cast": {
+  "frames": 21,
+  "loop": false,
+  "markers": {},
+  "model": "PetFlarefly",
+  "rig": "PetFlarefly__Rig",
+  "seconds": 0.7
+ },
+ "Flarefly_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "PetFlarefly",
+  "rig": "PetFlarefly__Rig",
+  "seconds": 2.0
+ },
+ "Flarefly_Move": {
+  "frames": 18,
+  "loop": true,
+  "markers": {},
+  "model": "PetFlarefly",
+  "rig": "PetFlarefly__Rig",
+  "seconds": 0.6
+ },
+ "Flarefly_Reveal": {
+  "frames": 36,
+  "loop": false,
+  "markers": {},
+  "model": "PetFlarefly",
+  "rig": "PetFlarefly__Rig",
+  "seconds": 1.2
+ },
+ "Frostling_Cast": {
+  "frames": 21,
+  "loop": false,
+  "markers": {},
+  "model": "PetFrostling",
+  "rig": "PetFrostling__Rig",
+  "seconds": 0.7
+ },
+ "Frostling_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "PetFrostling",
+  "rig": "PetFrostling__Rig",
+  "seconds": 2.0
+ },
+ "Frostling_Move": {
+  "frames": 18,
+  "loop": true,
+  "markers": {},
+  "model": "PetFrostling",
+  "rig": "PetFrostling__Rig",
+  "seconds": 0.6
+ },
+ "Frostling_Reveal": {
+  "frames": 36,
+  "loop": false,
+  "markers": {},
+  "model": "PetFrostling",
+  "rig": "PetFrostling__Rig",
+  "seconds": 1.2
+ },
+ "Fuser_Fuse": {
+  "frames": 60,
+  "loop": false,
+  "markers": {
+   "Flash": 40,
+   "PetOut": 44
+  },
+  "model": "FuserRig",
+  "rig": "FuserRig__Rig",
+  "seconds": 2.0
+ },
+ "Glacio_Cast": {
+  "frames": 21,
+  "loop": false,
+  "markers": {},
+  "model": "PetGlacio",
+  "rig": "PetGlacio__Rig",
+  "seconds": 0.7
+ },
+ "Glacio_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "PetGlacio",
+  "rig": "PetGlacio__Rig",
+  "seconds": 2.0
+ },
+ "Glacio_Move": {
+  "frames": 18,
+  "loop": true,
+  "markers": {},
+  "model": "PetGlacio",
+  "rig": "PetGlacio__Rig",
+  "seconds": 0.6
+ },
+ "Glacio_Reveal": {
+  "frames": 36,
+  "loop": false,
+  "markers": {},
+  "model": "PetGlacio",
+  "rig": "PetGlacio__Rig",
+  "seconds": 1.2
+ },
+ "Glintmoth_Cast": {
+  "frames": 21,
+  "loop": false,
+  "markers": {},
+  "model": "PetGlintmoth",
+  "rig": "PetGlintmoth__Rig",
+  "seconds": 0.7
+ },
+ "Glintmoth_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "PetGlintmoth",
+  "rig": "PetGlintmoth__Rig",
+  "seconds": 2.0
+ },
+ "Glintmoth_Move": {
+  "frames": 18,
+  "loop": true,
+  "markers": {},
+  "model": "PetGlintmoth",
+  "rig": "PetGlintmoth__Rig",
+  "seconds": 0.6
+ },
+ "Glintmoth_Reveal": {
+  "frames": 36,
+  "loop": false,
+  "markers": {},
+  "model": "PetGlintmoth",
+  "rig": "PetGlintmoth__Rig",
+  "seconds": 1.2
+ },
+ "Magmacore_Cast": {
+  "frames": 21,
+  "loop": false,
+  "markers": {},
+  "model": "PetMagmacore",
+  "rig": "PetMagmacore__Rig",
+  "seconds": 0.7
+ },
+ "Magmacore_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "PetMagmacore",
+  "rig": "PetMagmacore__Rig",
+  "seconds": 2.0
+ },
+ "Magmacore_Move": {
+  "frames": 18,
+  "loop": true,
+  "markers": {},
+  "model": "PetMagmacore",
+  "rig": "PetMagmacore__Rig",
+  "seconds": 0.6
+ },
+ "Magmacore_Reveal": {
+  "frames": 36,
+  "loop": false,
+  "markers": {},
+  "model": "PetMagmacore",
+  "rig": "PetMagmacore__Rig",
+  "seconds": 1.2
+ },
+ "Magmaw_Cast": {
+  "frames": 21,
+  "loop": false,
+  "markers": {},
+  "model": "PetMagmaw",
+  "rig": "PetMagmaw__Rig",
+  "seconds": 0.7
+ },
+ "Magmaw_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "PetMagmaw",
+  "rig": "PetMagmaw__Rig",
+  "seconds": 2.0
+ },
+ "Magmaw_Move": {
+  "frames": 18,
+  "loop": true,
+  "markers": {},
+  "model": "PetMagmaw",
+  "rig": "PetMagmaw__Rig",
+  "seconds": 0.6
+ },
+ "Magmaw_Reveal": {
+  "frames": 36,
+  "loop": false,
+  "markers": {},
+  "model": "PetMagmaw",
+  "rig": "PetMagmaw__Rig",
+  "seconds": 1.2
+ },
+ "Nebulynx_Cast": {
+  "frames": 21,
+  "loop": false,
+  "markers": {},
+  "model": "PetNebulynx",
+  "rig": "PetNebulynx__Rig",
+  "seconds": 0.7
+ },
+ "Nebulynx_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "PetNebulynx",
+  "rig": "PetNebulynx__Rig",
+  "seconds": 2.0
+ },
+ "Nebulynx_Move": {
+  "frames": 18,
+  "loop": true,
+  "markers": {},
+  "model": "PetNebulynx",
+  "rig": "PetNebulynx__Rig",
+  "seconds": 0.6
+ },
+ "Nebulynx_Reveal": {
+  "frames": 36,
+  "loop": false,
+  "markers": {},
+  "model": "PetNebulynx",
+  "rig": "PetNebulynx__Rig",
+  "seconds": 1.2
+ },
+ "Pebblit_Carry": {
+  "frames": 30,
+  "loop": true,
+  "markers": {},
+  "model": "PetPebblit",
+  "rig": "PetPebblit__Rig",
+  "seconds": 1.0
+ },
+ "Pebblit_Cast": {
+  "frames": 21,
+  "loop": false,
+  "markers": {},
+  "model": "PetPebblit",
+  "rig": "PetPebblit__Rig",
+  "seconds": 0.7
+ },
+ "Pebblit_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "PetPebblit",
+  "rig": "PetPebblit__Rig",
+  "seconds": 2.0
+ },
+ "Pebblit_Move": {
+  "frames": 18,
+  "loop": true,
+  "markers": {},
+  "model": "PetPebblit",
+  "rig": "PetPebblit__Rig",
+  "seconds": 0.6
+ },
+ "Pebblit_Reveal": {
+  "frames": 36,
+  "loop": false,
+  "markers": {},
+  "model": "PetPebblit",
+  "rig": "PetPebblit__Rig",
+  "seconds": 1.2
+ },
+ "Rubblord_Cast": {
+  "frames": 21,
+  "loop": false,
+  "markers": {},
+  "model": "PetRubblord",
+  "rig": "PetRubblord__Rig",
+  "seconds": 0.7
+ },
+ "Rubblord_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "PetRubblord",
+  "rig": "PetRubblord__Rig",
+  "seconds": 2.0
+ },
+ "Rubblord_Move": {
+  "frames": 18,
+  "loop": true,
+  "markers": {},
+  "model": "PetRubblord",
+  "rig": "PetRubblord__Rig",
+  "seconds": 0.6
+ },
+ "Rubblord_Reveal": {
+  "frames": 36,
+  "loop": false,
+  "markers": {},
+  "model": "PetRubblord",
+  "rig": "PetRubblord__Rig",
+  "seconds": 1.2
+ },
+ "Shardbun_Cast": {
+  "frames": 21,
+  "loop": false,
+  "markers": {},
+  "model": "PetShardbun",
+  "rig": "PetShardbun__Rig",
+  "seconds": 0.7
+ },
+ "Shardbun_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "PetShardbun",
+  "rig": "PetShardbun__Rig",
+  "seconds": 2.0
+ },
+ "Shardbun_Move": {
+  "frames": 18,
+  "loop": true,
+  "markers": {},
+  "model": "PetShardbun",
+  "rig": "PetShardbun__Rig",
+  "seconds": 0.6
+ },
+ "Shardbun_Reveal": {
+  "frames": 36,
+  "loop": false,
+  "markers": {},
+  "model": "PetShardbun",
+  "rig": "PetShardbun__Rig",
+  "seconds": 1.2
+ },
+ "Solarix_Cast": {
+  "frames": 21,
+  "loop": false,
+  "markers": {},
+  "model": "PetSolarix",
+  "rig": "PetSolarix__Rig",
+  "seconds": 0.7
+ },
+ "Solarix_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "PetSolarix",
+  "rig": "PetSolarix__Rig",
+  "seconds": 2.0
+ },
+ "Solarix_Move": {
+  "frames": 18,
+  "loop": true,
+  "markers": {},
+  "model": "PetSolarix",
+  "rig": "PetSolarix__Rig",
+  "seconds": 0.6
+ },
+ "Solarix_Reveal": {
+  "frames": 36,
+  "loop": false,
+  "markers": {},
+  "model": "PetSolarix",
+  "rig": "PetSolarix__Rig",
+  "seconds": 1.2
+ },
+ "Starwhale_Cast": {
+  "frames": 21,
+  "loop": false,
+  "markers": {},
+  "model": "PetStarwhale",
+  "rig": "PetStarwhale__Rig",
+  "seconds": 0.7
+ },
+ "Starwhale_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "PetStarwhale",
+  "rig": "PetStarwhale__Rig",
+  "seconds": 2.0
+ },
+ "Starwhale_Move": {
+  "frames": 18,
+  "loop": true,
+  "markers": {},
+  "model": "PetStarwhale",
+  "rig": "PetStarwhale__Rig",
+  "seconds": 0.6
+ },
+ "Starwhale_Reveal": {
+  "frames": 36,
+  "loop": false,
+  "markers": {},
+  "model": "PetStarwhale",
+  "rig": "PetStarwhale__Rig",
+  "seconds": 1.2
+ },
+ "Voidling_Carry": {
+  "frames": 30,
+  "loop": true,
+  "markers": {},
+  "model": "PetVoidling",
+  "rig": "PetVoidling__Rig",
+  "seconds": 1.0
+ },
+ "Voidling_Cast": {
+  "frames": 21,
+  "loop": false,
+  "markers": {},
+  "model": "PetVoidling",
+  "rig": "PetVoidling__Rig",
+  "seconds": 0.7
+ },
+ "Voidling_Idle": {
+  "frames": 60,
+  "loop": true,
+  "markers": {},
+  "model": "PetVoidling",
+  "rig": "PetVoidling__Rig",
+  "seconds": 2.0
+ },
+ "Voidling_Move": {
+  "frames": 18,
+  "loop": true,
+  "markers": {},
+  "model": "PetVoidling",
+  "rig": "PetVoidling__Rig",
+  "seconds": 0.6
+ },
+ "Voidling_Reveal": {
+  "frames": 36,
+  "loop": false,
+  "markers": {},
+  "model": "PetVoidling",
+  "rig": "PetVoidling__Rig",
+  "seconds": 1.2
+ }
+}
