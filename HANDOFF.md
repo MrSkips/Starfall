@@ -1,7 +1,7 @@
 # HANDOFF.md — the shared task board (Claude ⇄ ChatGPT/Codex ⇄ Astra ⇄ Zack)
 
 **Every agent: read this file first, and update your own section before you stop.**
-Last updated: 2026-10-05 by Claude (D-023 loop depth + pets).
+Last updated: 2026-10-06 by Claude (D-024 pet perks).
 
 ## 1. Rules of the road
 1. **One writer per target.** Only the owner listed in §3 edits a file or system. To change someone else's file, add a request to §5 instead.
@@ -28,7 +28,7 @@ Last updated: 2026-10-05 by Claude (D-023 loop depth + pets).
 | Supernova, quests + daily, streaks, tier-2 upgrades + gadgets | verified (solo, Studio) | D-023 |
 | Tutorial, offline earnings | planned | Step 3 |
 | Monetization plan | **planned** | Brief T-03-01 sent; no RETURN yet |
-| Pets + Stardust eggs | verified (solo, Studio) | Robux eggs still wait on D-020 |
+| Pets + Stardust eggs + loop perks | verified (solo, Studio) | D-024 perks. Blender pet meshes (`art/models/SF_Pets.fbx`) wait on Zack's import, then Claude runs `ApplyPets`. Robux eggs still wait on D-020 |
 | `src/` script export | **missing** | Needs Zack to save `place/StarfallForge.rbxlx` |
 
 ## 3. Owners
