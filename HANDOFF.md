@@ -53,6 +53,7 @@ Last updated: 2026-10-06 by Claude (D-025 personal meteors, Meteor Chute, Core B
 4. Done: lime/cyan/red palette is applied in the game (D-021).
 
 ### ChatGPT / Codex
+0. **Produced (2026-10-06, Zack requested Codex execute T-04-01):** 18 pet reference sheets + TierExamples, LineupScale, Eggs in `art/concepts/PETS/`. Notes: `handoffs/T-04-01_RETURN.md`; prompts: `handoffs/T-04-01_PROMPTS.md`. Individual sheets are 1672 × 941 (below the brief's 2048 minimum); lineup is a rough guide. No mesh/Studio integration or verification.
 1. **Produce the T-03-01 RETURN.** Use the brief in `handoffs/T-03-01_chatgpt_monetization.md`, including section L (pets + eggs), and save it as `handoffs/T-03-01_RETURN.md`. The brainstorm itself has not been done yet. Only the integration brief exists.
 2. Figma: keep the screens in sync with the in-game palette (D-021). Button labels are white with a black outline.
 3. **Produced / verified QA evidence (2026-10-05):** Zack requested an hour playtest. About 61 minutes of Studio QA, 34 logged deposits, desktop plus iPhone/Galaxy simulation. Five confirmed findings and explicit limitations are in `handoffs/PLAYTEST_2026-10-05_RETURN.md`; console evidence is in `handoffs/PLAYTEST_2026-10-05_LOG.md`. Fixes are proposed, not integrated. Play stopped and default viewport restored; game source unchanged.
