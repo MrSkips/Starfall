@@ -1,7 +1,7 @@
 # HANDOFF.md — the shared task board (Claude ⇄ ChatGPT/Codex ⇄ Astra ⇄ Zack)
 
 **Every agent: read this file first, and update your own section before you stop.**
-Last updated: 2026-10-05 by Claude.
+Last updated: 2026-10-05 by Claude (D-023 loop depth + pets).
 
 ## 1. Rules of the road
 1. **One writer per target.** Only the owner listed in §3 edits a file or system. To change someone else's file, add a request to §5 instead.
@@ -24,10 +24,11 @@ Last updated: 2026-10-05 by Claude.
 | Models (`SF_Models.fbx`): 4 machines, Conveyor, Bellows, Boots, pads, sign, 5 meteors, Starheart | verified | Templates in `ServerStorage.Art`; tools `ApplyMap`, `ApplyModels` |
 | UI in game (HUD, Forge panel, Collection, Settings) | verified | Asteroid layout in the **lime/cyan/red reference palette** with black text outlines (D-021) |
 | Sound + VFX (`StarterPlayerScripts.FX`) | verified (PC) | Music, 9 SFX, landing/payout/build effects. Zack hasn't heard the sounds yet |
-| Saving progress (DataStore) | **planned** | Biggest gap: players lose everything on leave |
-| Tutorial, Codex persistence, offline earnings, Supernova | planned | Step 3 |
+| Saving progress (DataStore) | integrated | Works only in the published game or with Studio API access on; Studio test showed the offline fallback |
+| Supernova, quests + daily, streaks, tier-2 upgrades + gadgets | verified (solo, Studio) | D-023 |
+| Tutorial, offline earnings | planned | Step 3 |
 | Monetization plan | **planned** | Brief T-03-01 sent; no RETURN yet |
-| Pets + eggs | planned | D-020 needs Zack (Robux eggs yes/no) |
+| Pets + Stardust eggs | verified (solo, Studio) | Robux eggs still wait on D-020 |
 | `src/` script export | **missing** | Needs Zack to save `place/StarfallForge.rbxlx` |
 
 ## 3. Owners
@@ -43,12 +44,9 @@ Last updated: 2026-10-05 by Claude.
 1. **Waiting:** T-03-01 RETURN (the monetization brainstorm). When it arrives, follow `handoffs/T-03-01_CLAUDE_INTEGRATION.md`:
    - write `docs/MONETIZATION.md` with an accept / revise / reject table
    - build only the launch set, with server-side receipt handling
-2. **Step 3, which can start now:**
-   - saving progress (DataStore: Stardust, upgrades, discovered mutations, settings)
-   - first-minute tutorial
-   - offline earnings
-   - Supernova
-   Saving progress comes first because monetization depends on it.
+2. **Step 3 remaining:** first-minute tutorial, offline earnings. (Saving, Supernova, quests, pets and gadgets are in: D-023.)
+   - Verify saving in the published game (needs Zack to publish).
+   - 2-player check: other players' pets, drones and launch pads.
 3. Measure free-player pacing for real: time to buy everything and Stardust per minute. This replaces the 15–25 min guess.
 4. Done: lime/cyan/red palette is applied in the game (D-021).
 
@@ -61,7 +59,7 @@ Last updated: 2026-10-05 by Claude.
 - Nothing assigned. Possible next: game thumbnail and icon once the name is picked (D-013), and pet concept art after T-03-01 returns.
 
 ### Zack
-1. Save the place to `place/StarfallForge.rbxlx` (File → Save to File As), then publish.
+1. Save the place to `place/StarfallForge.rbxlx` (File → Save to File As), then publish. To test saving inside Studio, turn on Game Settings → Security → Enable Studio Access to API Services.
 2. Send the T-03-01 brief to ChatGPT and save its RETURN.
 3. Decide the open items in §6.
 4. Run the friend playtest (`versions/v01/PLAYTEST.md`) on PC and phones.
