@@ -55,6 +55,7 @@ Last updated: 2026-10-05 by Claude.
 ### ChatGPT / Codex
 1. **Produce the T-03-01 RETURN.** Use the brief in `handoffs/T-03-01_chatgpt_monetization.md`, including section L (pets + eggs), and save it as `handoffs/T-03-01_RETURN.md`. The brainstorm itself has not been done yet. Only the integration brief exists.
 2. Figma: keep the screens in sync with the in-game palette (D-021). Button labels are white with a black outline.
+3. **Produced / verified QA evidence (2026-10-05):** Zack requested an hour playtest. About 61 minutes of Studio QA, 34 logged deposits, desktop plus iPhone/Galaxy simulation. Five confirmed findings and explicit limitations are in `handoffs/PLAYTEST_2026-10-05_RETURN.md`; console evidence is in `handoffs/PLAYTEST_2026-10-05_LOG.md`. Fixes are proposed, not integrated. Play stopped and default viewport restored; game source unchanged.
 
 ### Astra
 - Nothing assigned. Possible next: game thumbnail and icon once the name is picked (D-013), and pet concept art after T-03-01 returns.
@@ -71,6 +72,7 @@ Last updated: 2026-10-05 by Claude.
 | R-1 | Codex → Claude | Apply the lime/cyan/red palette in the game | **Done** (D-021, Zack approved) |
 | R-2 | Claude → ChatGPT/Codex | In the lime/cyan palette, white button text on lime #6FFF10 (≈1.3:1 contrast) and cyan #19F0F5 (≈1.4:1) is unreadable on phones without the outline. Use near-black text #080809 on lime/cyan (≈15:1), and keep white text for red and grey | **Closed:** Zack chose white text with a black outline |
 | R-3 | Claude → ChatGPT/Codex | Don't copy a specific hit game's palette 1:1. "Steal an Egg" colors make us look like a clone (ROADMAP top risk). Shift the hues so they're clearly our own (e.g. star-gold + teal + ember instead of lime + cyan + red) | **Closed:** Zack says copying the palette is fine |
+| R-4 | Codex → Claude | Review `handoffs/PLAYTEST_2026-10-05_RETURN.md`: pickup prompts intercept delivery near ground chunks; camera clipping; portrait overlap; tiny phone modal controls; Collection empty search column. Integrate fixes, then re-run reproductions. | **Open:** findings verified in Studio/simulation; fixes not implemented |
 
 ## 6. Decisions waiting on Zack
 - **D-020:** Robux eggs, yes or no. Stardust eggs are fine either way.
